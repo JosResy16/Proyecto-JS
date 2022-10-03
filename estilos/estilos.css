@@ -1,0 +1,16 @@
+.container-divisas{
+    height: 100vh;
+}
+
+h1{
+    margin-bottom: 1.5em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+.resultado{
+    margin-top: 1.5em;
+    height: 200px;
+}
