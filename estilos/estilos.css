@@ -1,16 +1,42 @@
-.container-divisas{
-    height: 100vh;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-    margin-bottom: 1.5em;
+.container{
+    background-color: rgb(47, 167, 214);
+    height: 350px;
 }
 
-h3{
-    font-size: 1.5em;
+p{
+    font-size: 1.2em;
+    margin-bottom: .5em;
 }
 
-.resultado{
-    margin-top: 1.5em;
-    height: 200px;
+.cont-parametros{
+    margin-top: 50px;
+}
+
+.cont-kg{
+    margin-top: 15px;
+}
+
+input{
+    width: 140px;
+}
+
+.btnn{
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    transition: ease all .5s ;
+}
+
+.btnn:hover{
+    background-color: black;
+    color: white;
+
 }
