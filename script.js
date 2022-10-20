@@ -63,48 +63,4 @@ function calc_imc(peso,altura){
     }
 };
 
-
-
-
-
-
-// function calc_imc(peso, altura){
-//     imc = Math.round(peso * 10 / altura / altura) / 10;
-//     console.log("Tu IMC es: " , imc)
-
-//     if(imc <= 18.5){
-
-//         console.log("DE ACUERDO A LA INFORMACIÓN QUE INGRESASTE:")
-//         console.log("Peso: " , peso);
-//         console.log("Altura: " , altura);
-//         console.log("Su IMC es " , imc , "lo que indica que su peso esta en la categoría de Bajo peso para adultos de su estatura.");
-//         console.log("IMC por debajo de ",imc_bajo.valor_max , imc_bajo.recomendacion);
-
-//     } else if(imc <= 24.9 && imc > 18.5){
-
-//         console.log("DE ACUERDO A LA INFORMACIÓN QUE INGRESASTE:")
-//         console.log("Peso: " , peso);
-//         console.log("Altura: " , altura);
-//         console.log("Su IMC es " , imc , "lo que indica que su peso esta en la categoría de Peso saludable para adultos de su estatura.");
-//         console.log("Su IMC se encuentra entre los valores recomendados ", imc_saludable.valor_min ,"a" , imc_saludable.valor_max , imc_saludable.recomendacion);
-
-//     } else if(imc <= 29.9 && imc > 24.9){
-        
-//         console.log("DE ACUERDO A LA INFORMACIÓN QUE INGRESASTE:")
-//         console.log("Peso: " , peso);
-//         console.log("Altura: " , altura);
-//         console.log("Su IMC es " , imc , "lo que indica que su peso esta en la categoría de Sobrepeso para adultos de su estatura.");
-//         console.log("Su IMC sobre pasa los valores recomendados y se encuntra entre ", imc_sobrepeso.valor_min , "y" , imc_sobrepeso.valor_max , imc_sobrepeso.recomendacion);
-
-//     } else if(imc => 30){
-
-//         console.log("DE ACUERDO A LA INFORMACIÓN QUE INGRESASTE:")
-//         console.log("Peso: " , peso);
-//         console.log("Altura: " , altura);
-//         console.log("Su IMC es " , imc , "lo que indica que su peso esta en la categoría de Obeso para adultos de su estatura.");
-//         console.log("Su IMC se ecuntra en valores de obesidad, por incima de ", imc_obesidad.valor_min , imc_obesidad.recomendacion);
-
-//     }
-// };
-
-calc_imc();
+calc_imc(peso, altura);
