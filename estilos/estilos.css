@@ -1,42 +1,142 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+header{
+    background-color: hwb(0 0% 100% / 0.233);
+    position: fixed;
+    z-index: 6;
+    transition: .3s  all;
 }
 
-.container{
-    background-color: rgb(47, 167, 214);
-    height: 350px;
+header:hover{
+    background-color: hwb(0 0% 100% / 0.63) ;
+    transition: .3s  all;
 }
 
-p{
-    font-size: 1.2em;
-    margin-bottom: .5em;
+h4,p{
+    color: black;
 }
 
-.cont-parametros{
-    margin-top: 50px;
-}
-
-.cont-kg{
-    margin-top: 15px;
-}
-
-input{
-    width: 140px;
-}
-
-.btnn{
-    margin-top: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
+.logo{
     width: 70px;
-    height: 30px;
-    transition: ease all .5s ;
+    height: 80px;
 }
 
-.btnn:hover{
-    background-color: black;
+.lista_header li{
+    width: 300px;
+    list-style: none;
     color: white;
+    transition: ease .3s  all;
+    
+}
 
+.lista_header li:hover{
+    cursor: pointer;
+    color: rgb(219, 155, 17);
+}
+
+.carrito{
+    margin-top: 15px;
+    margin-right: 30px;
+    font-size: 2em;
+    color: white;
+    transition: ease .3s  all;
+}
+
+.carrito:hover{
+    cursor: pointer;
+    color: rgb(219, 155, 17);
+}
+
+.logo{
+    margin-left: 20px;
+}
+
+.Banner_bienvenida{
+    width: 60%;
+    height: 600px;
+    border-radius: 10px;
+    background-color: yellow;
+    margin: auto;
+    position: relative; top: -750px;
+    z-index: 5;
+}
+
+.banner{
+    height: 800px;
+    z-index: 2;
+}
+
+.banner img{
+    width: 100%;
+    height: 800px;
+}
+
+body{
+    background-color: rgb(87, 87, 87);
+}
+
+.fondo_oscuro{
+    width: 100%vw;
+    height: 100%vh;
+    background-color: rgba(0, 0, 0, 0.623);
+    z-index: 99;
+}
+
+.container_productos{
+    height: auto;
+    width: 70%;
+    /* margin: auto; */
+    /* margin-top: 40px; */
+    background-color: white;
+    /* border-radius: 10px 10px 0 0; */
+    z-index: 5;
+}
+.carta_producto{
+    margin-bottom: 100px;
+    z-index: 4;
+}
+
+.carta_producto h4{
+    margin-top: 20px;
+}
+.row{
+    margin-right: 0;
+}
+
+.carta_producto img{
+    height: 450px;
+    border-radius: 10px;
+    margin-top: 40px;
+    
+}
+
+span{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.estampa img{
+    position: relative; top: -2200px; right: 425px;
+    width: 400px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.seccion_carrito{
+    width: 20%;
+    height: 700px;
+    margin-left: 90px;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: rgb(216, 213, 25);
+    z-index: 5;
+}
+
+.seccion_carrito h4{
+    font-size: 2em;
+    margin: 20px 0 20px 30px;
+
+}
+
+.detalles_carrito{
+    width: 100%;
+    margin-left: 20px;
 }

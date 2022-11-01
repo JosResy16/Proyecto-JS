@@ -6,26 +6,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d7a0f9d7de.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilos/estilos.css">
-    <title>Calculadora IMC</title>
+    <title>TheGarage</title>
 </head>
 <body>
-    <div class="container d-flex flex-column ">
-        <h1 class="text-center">Calculadora del IMC para adultos</h1>
-        <div class="cont-parametros">
-            <div>
-                <p>Estatura: Metros</p>
-                <label for="estatura"></label>
-                <input type="num" name="estatura" id="estatura">
-            </div>
-            <div class="cont-kg">
-                <p>Peso: Kilogramos</p>
-                <label for="peso"></label>
-                <input type="num" name="peso" id="peso">
-            </div>
-            <button class="btnn">Calcular</button>
+    <header class="container-fluid d-flex flex-row justify-content-between">
+        <div>
+            <img class="logo" src="img/logo.png" alt="">
         </div>
-    </div>
+        <ul class="lista_header d-flex align-items-center h4">
+            <li class="color-white">Ver todo</li>
+            <li>Nuevo</li>
+            <li>V 2.0</li>
+        </ul>
+        <div class="carrito">
+            <i class="fa-solid fa-cart-shopping h4"></i>
+        </div>
+    </header>
+    <main>
+
+<!-- 
+
+== ESTRUCUTRA MENSAJE DE BIENVENIDA ==
+
+<div class="fondo_oscuro">
+    <div class="Banner_bienvenida">
+        <h4>Bienvenido</h4>
+        <div>
+            <label for="">Eres nuevo</label>
+            <input type="checkbox" name="" id="">
+        </div>
+        <div>
+            <label for="">Estoy registrado</label>
+            <input type="checkbox" name="" id="">
+        </div>
+    </div>        
+</div>
+
+-->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active banner">
+                    <img src="img/fondo_garage.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item banner">
+                    <img src="img/fonto_instalacion.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item banner">
+                    <img src="img/fondo_calle.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        <section class="container_main d-flex">
+            <div class="container_productos container-fluid row">
+                <div class="d-flex flex-column col-4 container flex-column carta_producto">
+                    <img src="img/brazo_blanco.jpg" alt="">
+                    <div class="flex-column">
+                        <h4>Nombre del prodcuto</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia similique eaque alias quo, reprehenderit facilis totam dolorem officia praesentium! Eligendi.</p>
+                        <span>$###</span>
+                        <button class ="btn btn-danger btn-comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-4 carta_producto">
+                    <img src="img/Brazo_hibrido.jpg" alt="">
+                    <div>
+                        <h4>Nombre del prodcuto</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia similique eaque alias quo, reprehenderit facilis totam dolorem officia praesentium! Eligendi.</p>
+                        <span>$###</span>
+                        <button class ="btn btn-danger btn-comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-4 carta_producto">
+                    <img src="img/torso_gris.jpg" alt="">
+                    <div>
+                        <h4>Nombre del prodcuto</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia similique eaque alias quo, reprehenderit facilis totam dolorem officia praesentium! Eligendi.</p>
+                        <span>$###</span>
+                        <button class ="btn btn-danger btn-comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-4 carta_producto">
+                    <img src="img/manos.png" alt="">
+                    <div>
+                        <h4>Nombre del prodcuto</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia similique eaque alias quo, reprehenderit facilis totam dolorem officia praesentium! Eligendi.</p>
+                        <span>$###</span>
+                        <button class ="btn btn-danger btn-comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-4 carta_producto">
+                    <img src="img/ms_blanco.jpg" alt="">
+                    <div>
+                        <h4>Nombre del prodcuto</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia similique eaque alias quo, reprehenderit facilis totam dolorem officia praesentium! Eligendi.</p>
+                        <span>$###</span>
+                        <button class ="btn btn-danger btn-comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-4 carta_producto">
+                    <img src="img/pierna.jpg" alt="">
+                    <div>
+                        <h4>Nombre del prodcuto</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia similique eaque alias quo, reprehenderit facilis totam dolorem officia praesentium! Eligendi.</p>
+                        <span>$###</span>
+                        <button class ="btn btn-danger btn-comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-4 carta_producto">
+                    <img src="img/torso_mujer.jpg" alt="">
+                    <div>
+                        <h4>Nombre del prodcuto</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia similique eaque alias quo, reprehenderit facilis totam dolorem officia praesentium! Eligendi.</p>
+                        <span>$###</span>
+                        <button class ="btn btn-danger btn-comprar">Comprar</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-4 carta_producto">
+                    <img src="img/torso_balnco.jpg" alt="">
+                    <div>
+                        <h4>Nombre del prodcuto</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia similique eaque alias quo, reprehenderit facilis totam dolorem officia praesentium! Eligendi.</p>
+                        <span>$###</span>
+                        <button class ="btn btn-danger btn-comprar">Comprar</button>
+                    </div>
+                </div>>
+            </div>
+            <div class="seccion_carrito">
+                <h4>Carrito</h4>
+                <table class="detalles_carrito">
+                    <thead>
+                        <td>Imagen</td>
+                        <td>Producto</td>
+                        <td>Precio</td>
+                        <td>Cantidad</td>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+        </section>
+    </main>
 
 
     <script src="script.js"></script>
