@@ -128,6 +128,8 @@ span{
     border-radius: 10px;
     background-color: rgb(216, 213, 25);
     z-index: 5;
+    display: none;
+    flex-direction: column;
 }
 
 .seccion_carrito h4{
@@ -138,5 +140,17 @@ span{
 
 .detalles_carrito{
     width: 100%;
-    margin-left: 20px;
+}
+
+table{
+    /* display: flex; */
+    justify-content: space-between;
+    text-align: center;
+}
+.thead {
+    width: 100%;
+}
+
+td img{
+    width: 60px;
 }
