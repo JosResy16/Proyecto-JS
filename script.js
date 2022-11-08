@@ -1,10 +1,17 @@
 // script banner bienvenida
-
+let btn_x = document.getElementById("cerrar_banner");
 let btn_iniciar = document.getElementById("btn_iniciar");
 let btn_registrar = document.getElementById("btn_registrar");
 
+btn_x.addEventListener("click" , cerrar_banner);
 btn_iniciar.addEventListener("click" , iniciar_sesion);
 btn_registrar.addEventListener("click" , registrarse);
+
+
+function cerrar_banner(){
+    let banner_bienvenida = document.getElementById("fondo_oscuro");
+    banner_bienvenida.style.display = "none";
+}
 
 function iniciar_sesion(){
     let form = document.createElement("form");
