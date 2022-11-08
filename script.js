@@ -115,25 +115,25 @@ function alta_usuario(){
 
 // Fin de script para registro / inicio de sesion 
 
-function iniciar_sesion(){
-    let usuario = document.getElementById("usuario_iniciar");
-    let password = document.getElementById("password");
+// function iniciar_sesion(){
+//     let usuario = document.getElementById("usuario_iniciar");
+//     let password = document.getElementById("password");
 
-    let objeto_usuario = {
-        usuario: usuario.value,
-        pass: pass.value,
-    }
+//     let objeto_usuario = {
+//         usuario: usuario.value,
+//         pass: pass.value,
+//     }
 
-    let recuperado_arreglo = localStorage.getItem("usuarios");
-    recuperado_arreglo = JSON.parse(recuperado_arreglo);
+//     let recuperado_arreglo = localStorage.getItem("usuarios");
+//     recuperado_arreglo = JSON.parse(recuperado_arreglo);
 
 
-    let usuario_find = recuperado_arreglo.find(buscar_usuario);
-}
+//     let usuario_find = recuperado_arreglo.find(buscar_usuario);
+// }
 
-function buscar_usuario(usuario){
-    return usuario.usuario == usuario.value
-}
+// function buscar_usuario(usuario){
+//     return usuario.usuario == usuario.value
+// }
 
 
 // FIN Script inicio de sesion 
