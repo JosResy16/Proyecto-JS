@@ -1,69 +1,71 @@
 // script banner bienvenida
 
-let checbox_iniciar = document.getElementById("checbox_iniciar");
-let checbox_registrarse = document.getElementById("checbox_registrarse")
+let btn_iniciar = document.getElementById("btn_iniciar");
+let btn_registrar = document.getElementById("btn_registrar");
 
-checbox_registrarse.addEventListener("click" , registrarse);
-checbox_iniciar.addEventListener("click" , iniciar_sesion);
+btn_iniciar.addEventListener("click" , iniciar_sesion);
+btn_registrar.addEventListener("click" , registrarse);
 
 function iniciar_sesion(){
     let form = document.createElement("form");
-    form.innerHTML = 
-                        `<input type="text" placeholder="Usuario">
-                        <input type="password" placeholder="Contraseña">
-                        <button class="btn btn-primary" id="btn_ingresar">Ingresar</button>
-                        <a href="index.html">Regresar</a>`
+    form.innerHTML = `<input type="text" placeholder="Usuario" id="usuario_iniciar">
+                    <input type="password" placeholder="Contraseña" id="password">
+                    <button class="btn btn-primary" id="btn_ingresar">Ingresar</button>
+                    <a href="index.html">Regresar</a>`
 
     let banner_bienvenida = document.getElementById("banner_bienvenida");
-
     banner_bienvenida.append(form);
 
     let input_bienvenida = document.getElementById("inputs_bienvenida");
     input_bienvenida.remove();
+
+    let btn_iniciar_sesion = document.getElementById("btn_iniciar");
+    btn_iniciar_sesion.addEventListener("click" , iniciar_sesion);
 }
 
 function registrarse(){
-    let form = document.createElement("form");
-    form.innerHTML = `
-                        <input type="text" placeholder="Nombre" id="nombre_usuario">
-                        <input type="text" placeholder="Usuario" id="usuario">
-                        <input type="password" placeholder="Contraseña" id="password">
-                        <input type="number" placeholder="Edad"> 
-                        <button class="btn btn-primary" id="btn_registrar">Registrarse</button>
-                        <a href="index.html">Regresar</a>`
+    let form_registro = document.createElement("div");
+    form_registro.innerHTML =   `<input type="text" id="nombre" placeholder="Nombre">
+                                <input type="text" id="usuario" placeholder="Usuario">
+                                <input type="password" name="" id="password" placeholder="Contraseña">
+                                <input type="number" id="edad" placeholder="Edad">
+                                <button class="btn btn-primary" id="btn_registrarme">Registrarse</button>
+                                <a href="index.html">Regresar</a>`
 
-    let mensaje_bienvenida = document.querySelector("h4").textContent = "Bienvenido. Hablanos un poco de ti";
-
+    let mensaje_bienvenida = document.querySelector("h4").textContent = "Bienvenido, háblanos un poco de ti";
 
     let banner_bienvenida = document.getElementById("banner_bienvenida");
-    banner_bienvenida.append(form);
+    banner_bienvenida.append(form_registro);
 
     let input_bienvenida = document.getElementById("inputs_bienvenida");
     input_bienvenida.remove();
 
-    let btn_registro = document.getElementById("btn_registrar");
-
-    btn_registro.addEventListener("click" , alta_usuario);
+    let btn_registrarme = document.getElementById("btn_registrarme");
+    btn_registrarme.addEventListener("click" , alta_usuario);
 }
 
 //  fin script banner de bienvenida
 
 // Inicia script para registro / inicio sesion 
-
 let arreglo_usarios = [];
 
 function alta_usuario(){
-    let usuario = document.getElementById("usuario");
+    let nombre = document.getElementById("nombre");
+    let nombre_usuario = document.getElementById("usuario");
     let pass = document.getElementById("password");
-    let nombre_usuario = document.getElementById("nombre_usuario");
+    let edad = document.getElementById("edad");
 
-    let objeto_usuario = {
-        nombre: nombre_usuario.value,
-        pass: pass.value,
-        usuario: usuario.value
-    }
+    let usuario = {
+        nombre:nombre.value, 
+        usuario:nombre_usuario.value, 
+        pass:pass.value, 
+        edad:edad.value
+    };
 
-    arreglo_usarios.push(objeto_usuario);
+    arreglo_usarios.push(usuario);
+
+    // let arreglo_json = JSON.stringify(arreglo_usarios);
+    // localStorage.setItem("usuarios" , arreglo_json);
 
     if(localStorage.length != 0){
         let recuperado_arreglo = localStorage.getItem("usuarios");
@@ -71,9 +73,9 @@ function alta_usuario(){
 
         for(let usuario_arreglo of recuperado_arreglo){
             
-            if(objeto_usuario.usuario == usuario_arreglo.usuario){
+            if(usuario.usuario == usuario_arreglo.usuario){
                 let p = document.createElement("p");
-                p.innerHTML = `<p>Este usuario ya está registrado</p>`
+                p.innerHTML = `<p style="color:red">Este usuario ya está registrado</p>`
 
                 let alerta_usuario_registrado = document.getElementById("banner_bienvenida");
                 alerta_usuario_registrado.append(p);
@@ -81,33 +83,54 @@ function alta_usuario(){
             }
             else{
                 let p = document.createElement("p");
-                p.innerHTML = `<p>Registro exitoso</p>`
+                p.innerHTML = `<p style="color:green">Registro exitoso</p>`
 
                 let registro_exitoso = document.getElementById("banner_bienvenida");
                 registro_exitoso.append(p);
-
-                let input_bienvenida = document.getElementById("inputs_bienvenida");
-                input_bienvenida.remove();
             }
         }
     }
     else{
+        arreglo_usarios.push(usuario);
+
         let arreglo_json = JSON.stringify(arreglo_usarios);
         localStorage.setItem("usuarios" , arreglo_json);
 
         let p = document.createElement("p");
-                p.innerHTML = `<p>Registro exitoso</p>`
+                p.innerHTML = `<p style="color:green">Registro exitoso</p>`
 
-                let registro_exitoso = document.getElementById("banner_bienvenida");
-                registro_exitoso.append(p);
-
-                let input_bienvenida = document.getElementById("inputs_bienvenida");
-                input_bienvenida.remove();
+        let registro_exitoso = document.getElementById("banner_bienvenida");
+        registro_exitoso.append(p);
 
     }
 }
 
+
 // Fin de script para registro / inicio de sesion 
+
+function iniciar_sesion(){
+    let usuario = document.getElementById("usuario_iniciar");
+    let password = document.getElementById("password");
+
+    let objeto_usuario = {
+        usuario: usuario.value,
+        pass: pass.value,
+    }
+
+    let recuperado_arreglo = localStorage.getItem("usuarios");
+    recuperado_arreglo = JSON.parse(recuperado_arreglo);
+
+
+    let usuario_find = recuperado_arreglo.find(buscar_usuario);
+}
+
+function buscar_usuario(usuario){
+    return usuario.usuario == usuario.value
+}
+
+
+// FIN Script inicio de sesion 
+
 let carrito = [];
 
 let btn_comprar = document.getElementsByClassName("btn-comprar");
